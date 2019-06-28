@@ -9,11 +9,12 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/02dc28ed13.js"></script>
     <link rel="stylesheet" href="css/main.css">
 
     <title>Gravity Game</title>
 </head>
-<body>
+<body onload="startGame()">
     <div class="container">
         <div class="spacer"></div>
         <div class="row">
@@ -28,6 +29,19 @@
             </div>
         </div>
         <div class="spacer"></div>
+        <div class="row">
+            <div class="col-md-12 center-align">
+                <button type="button" class="btn btn-dark" onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">
+                    <i class="fas fa-rocket"></i>
+                    <strong> Boost</strong>
+                </button>
+                <button type="button" class="btn btn-danger" onclick="window.location.reload();">
+                    <i class="fas fa-redo-alt"></i>
+                    <strong> Restart</strong>
+                </button>                
+            </div>
+        </div>
+        <div class="spacer"></div>        
     </div>
 
     <!-- Optional JavaScript -->
